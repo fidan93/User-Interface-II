@@ -1,1 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+
 /* Add CSS styling here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Header design */
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+html{
+    color: #6d6a6a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+background-color: peru;
+width: 100%;
+padding: 2% 0;
+}
+
+header h1{
+    font-size: 2.9rem;
+    padding: 2% 5%;
+    font-family: 'Architects Daughter', cursive;
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+}
+
+.nav-container{
+display: flex;
+align-items: center;
+padding-bottom: 1%;
+}
+
+.nav-container a{
+   display: block;
+   padding:2% 3%;
+   color: grey;
+   font-size: 1.8rem;
+   text-shadow: 0.5px 0.5px black;
+   background-color: honeydew;
+   border: 0.5px solid peru;
+   border-radius: 5%;
+   transition: .3s;
+  
+}
+
+.nav-container a:nth-of-type(1){
+    background-color:brown;
+    color: white; 
+    margin-left: 7%;
+}
+.nav-container a:hover
+{
+ background-color:rgb(243, 221, 150);
+ color: rgb(75, 59, 48);
+ transform:scale(1.1) ; 
+}
+
+
+/* first section design */
+
+.sec1{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+.sec1 img{
+    width: 100%;  
+    box-shadow: 1px 1px peru;
+}
+.sec1 div{
+    width: 48%;
+}
+.text-div{
+    display: flex;
+    flex-direction: column; 
+}
+.text-div h2{
+    font-size: 2.5rem;
+    color: #e0c3a2;
+    text-shadow:1px 1px grey;
+    font-family: 'Architects Daughter', cursive ;
+    line-height: 2;
+}
+.text-div a{
+    display: block;
+    padding: 2.5%;
+    margin:2% 0; 
+    width: 40%;
+    font-size: 1.8em;
+    border: 0.5px solid peru;
+    border-radius: 10%;
+    box-shadow: 1px 2px grey;
+    text-align: center;
+    color: grey;
+    text-shadow: 0.1px 0.1px black;
+    transition: .3s;
+
+}
+.text-div a:hover{
+ background-color:rgb(243, 221, 150);
+ color: rgb(75, 59, 48);
+ transform:scale(1.05) ;
+}
+.text-div p{
+  height: 80%;
+  padding:2%; 
+  font-size: 1.5rem;
+  font-family: 'Architects Daughter', cursive;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+/* second section */
+.sec2{
+    display:flex;
+    width: 96%;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin: 2%;
+}
+
+.sec2 .item{
+    width: 22%;
+    margin-bottom: 5%;
+    border: 1px solid peru;
+}
+.item img{
+    width: 100%;
+    height: 80%;
+}
+.item p{
+    padding: 7% 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+footer
+{
+     display: flex;
+    flex-direction: column; 
+    background-color: brown;
+    text-align: center;
+    align-content: space-around;
+    align-items: center;
+    padding: 2% 0;
+    /* padding:4% 0; */
+}
+footer h3{
+font-size: 2.5rem;
+line-height: 2;
+color: white;
+font-family:'Architects Daughter', cursive;
+}
+
+footer a{
+    display: block;
+    border: 1px solid grey;
+    padding:1% 3%;
+    margin: 1%;
+    width: 20%;
+    color: white;
+    font-size: 1.8rem;
+    transition: .3s;
+    box-sizing: unset;
+}
+footer a:hover{
+    background-color:grey;
+    transform:scale(1.05) ;
+}
+footer a:nth-of-type(2){
+    background:#3b5998;
+}
+footer a i{
+    color: white;
+}
+ footer a:nth-of-type(2):hover{
+    background-color: grey;
+} 
+@media(max-width:800px){
+header{text-align: center;}
+.nav-container{
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.nav-container a{
+    width: 25%;
+}
+.nav-container a:nth-of-type(1){
+    margin-left: 0;
+}
+/* section 1 */
+.sec1{
+    flex-wrap: wrap;
+}
+.sec1 div{
+    width: 100%;
+}
+.text-div{
+    text-align: center;
+}
+.text-div a{
+   margin: 0% auto; 
+}
+/* section 2 */
+.sec2 .item{
+width: 46%;
+}
+}
+@media(max-width:500px){
+.nav-container a{
+    width: 40%;
+    font-size: 1.4rem;
+}
+.text-div a{
+    font-size: 1.4rem;
+    width: 50%;
+}
+ footer a{
+    width:50%;
+} 
+}
