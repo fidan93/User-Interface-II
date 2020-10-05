@@ -22,7 +22,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -51,20 +50,29 @@ table {
 	border-spacing: 0;
 }
 
+
 /* Header design */
 *{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+html{
     color: #6d6a6a;
     font-family: 'Courier New', Courier, monospace;
-    
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
 }
 
 header{
 background-color: peru;
 width: 100%;
+padding: 2% 0;
 }
 
 header h1{
-    font-size: 2.1rem;
+    font-size: 2.9rem;
     padding: 2% 5%;
     font-family: 'Architects Daughter', cursive;
     color: whitesmoke;
@@ -73,31 +81,27 @@ header h1{
 
 .nav-container{
 display: flex;
-margin-left: 7%;
-height: 10vh;
 align-items: center;
 padding-bottom: 1%;
 }
 
-a{
-    text-decoration: none;
-}
-
 .nav-container a{
    display: block;
-   padding: 2%;
+   padding:2% 3%;
    color: grey;
-   font-size: 1.1rem;
+   font-size: 1.8rem;
    text-shadow: 0.5px 0.5px black;
    background-color: honeydew;
    border: 0.5px solid peru;
    border-radius: 5%;
    transition: .3s;
+  
 }
 
 .nav-container a:nth-of-type(1){
     background-color:brown;
     color: white; 
+    margin-left: 7%;
 }
 .nav-container a:hover
 {
@@ -108,40 +112,36 @@ a{
 
 
 /* first section design */
+
 .sec1{
     display: flex;
-    flex-wrap: wrap;
-    width: 96%;
     justify-content: space-between;
-    margin: 2%;
+    padding: 2%;
 }
 .sec1 img{
-    width: 100%; 
-    height: 100%; 
+    width: 100%;  
     box-shadow: 1px 1px peru;
 }
 .sec1 div{
-    width: 46.5%;
-    height: 40vh;
+    width: 48%;
 }
-.sec1div{
+.text-div{
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    flex-direction: column; 
 }
-.sec1div h3{
-    font-size: 1.8rem;
+.text-div h2{
+    font-size: 2.5rem;
     color: #e0c3a2;
     text-shadow:1px 1px grey;
     font-family: 'Architects Daughter', cursive ;
     line-height: 2;
 }
-.sec1div a{
+.text-div a{
     display: block;
     padding: 2.5%;
     margin:2% 0; 
     width: 40%;
-    font-size: 1.2em;
+    font-size: 1.8em;
     border: 0.5px solid peru;
     border-radius: 10%;
     box-shadow: 1px 2px grey;
@@ -151,15 +151,15 @@ a{
     transition: .3s;
 
 }
-.sec1div a:hover{
+.text-div a:hover{
  background-color:rgb(243, 221, 150);
  color: rgb(75, 59, 48);
  transform:scale(1.05) ;
 }
-.sec1div p{
+.text-div p{
   height: 80%;
-  margin: 3% 0; 
-  font-size: 1.2rem;
+  padding:2%; 
+  font-size: 1.5rem;
   font-family: 'Architects Daughter', cursive;
   letter-spacing: 1px;
   box-sizing: border-box;
@@ -174,7 +174,7 @@ a{
 }
 
 .sec2 .item{
-    width: 20%;
+    width: 22%;
     margin-bottom: 5%;
     border: 1px solid peru;
 }
@@ -183,32 +183,38 @@ a{
     height: 80%;
 }
 .item p{
-    margin-top: 5%;
+    padding: 7% 0;
     text-align: center;
+    font-size: 1.5rem;
 }
 footer
 {
-    /* display: flex;
-    flex-direction: column; */
-    width: 100%;
+     display: flex;
+    flex-direction: column; 
     background-color: brown;
     text-align: center;
-    padding:4% 0;
+    align-content: space-around;
+    align-items: center;
+    padding: 2% 0;
+    /* padding:4% 0; */
 }
-footer p{
-font-size: 1.6rem;
+footer h3{
+font-size: 2.5rem;
+line-height: 2;
 color: white;
-margin-bottom: 4%;
 font-family:'Architects Daughter', cursive;
 }
 
 footer a{
+    display: block;
     border: 1px solid grey;
     padding:1% 3%;
-    width: 10%;
+    margin: 1%;
+    width: 20%;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     transition: .3s;
+    box-sizing: unset;
 }
 footer a:hover{
     background-color:grey;
@@ -223,3 +229,47 @@ footer a i{
  footer a:nth-of-type(2):hover{
     background-color: grey;
 } 
+@media(max-width:800px){
+header{text-align: center;}
+.nav-container{
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.nav-container a{
+    width: 25%;
+}
+.nav-container a:nth-of-type(1){
+    margin-left: 0;
+}
+/* section 1 */
+.sec1{
+    flex-wrap: wrap;
+}
+.sec1 div{
+    width: 100%;
+}
+.text-div{
+    text-align: center;
+}
+.text-div a{
+   margin: 0% auto; 
+}
+/* section 2 */
+.sec2 .item{
+width: 46%;
+}
+}
+@media(max-width:500px){
+.nav-container a{
+    width: 40%;
+    font-size: 1.4rem;
+}
+.text-div a{
+    font-size: 1.4rem;
+    width: 50%;
+}
+ footer a{
+    width:50%;
+} 
+}
